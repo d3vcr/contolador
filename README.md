@@ -1,6 +1,6 @@
-DMX Controller Ultimate
-DMX Controller Ultimate es una aplicación Python basada en PyQt5 para controlar cabezas móviles y dispositivos DMX a través de un puerto serial. Diseñada para ser robusta y modular, permite controlar manualmente canales DMX, aplicar efectos, guardar/cargar escenas, ejecutar secuencias, y monitorear sensores (DHT11/DHT22) e infrarrojos (IR). La aplicación es ideal para aplicaciones de iluminación en eventos, teatros, o instalaciones interactivas, con soporte para Raspberry Pi y otras plataformas.
-Características
+#DMX Controller Ultimate
+#DMX Controller Ultimate es una aplicación Python basada en PyQt5 para controlar cabezas móviles y dispositivos DMX a través de un puerto serial. Diseñada para ser robusta y modular, permite controlar manualmente canales DMX, aplicar efectos, guardar/cargar escenas, ejecutar secuencias, y monitorear sensores (DHT11/DHT22) e infrarrojos (IR). La aplicación es ideal para aplicaciones de iluminación en eventos, teatros, o instalaciones interactivas, con soporte para Raspberry Pi y otras plataformas.
+#Características
 	•	Control Manual: Ajuste de canales DMX mediante sliders para cada cabeza y canal.
 	•	Efectos Dinámicos: Incluye efectos como ColorChase, Strobe, Rainbow, GoboPattern, y AudioReactivity.
 	•	Escenas: Guarda y carga configuraciones DMX en archivos JSON.
