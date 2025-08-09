@@ -1,0 +1,12 @@
+cabeza quebrada 
+solamente con el canal 11 ya empieza a funciionar
+con canal 4 y canal 6 en slider pocicion 12  color rojo
+#canal11 haace arcoiriiiis y se hace aumatica
+#canal 1 correcto
+#canal 2 correcto
+#canal 3 correcto
+#canal 4 dimmer correcto
+#canal 5 flash
+#canal 6  blanco
+#canal 7 amarillo
+todos los canales correctos 

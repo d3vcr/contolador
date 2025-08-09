@@ -1,0 +1,7 @@
+pyqt5
+pyserial
+pyaudio
+numpy
+python-osc
+adafruit-circuitpython-dht
+RPi.GPIO

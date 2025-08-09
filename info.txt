@@ -1,0 +1,92 @@
+ 
+A professional DMX512 controller for Raspberry Pi, designed to control moving heads and integrate with sensors, LEDs, and IR components.
+Features
+    • DMX Control: Supports 9CH and 14CH moving heads via MAX485.
+    • GUI: PyQt5-based interface with tabs for manual control, colors, effects, scenes, and sensor data.
+    • Effects: Includes ColorChase, Strobe, and Rainbow effects.
+    • Sensors: Reads temperature and humidity from DHT11/DHT22.
+    • Scenes: Save and load DMX configurations in JSON format.
+    • LEDs: RGB LEDs as status indicators (GPIO5, GPIO6, GPIO13).
+    • IR: Basic IR receiver (phototransistor) and emitter support.
+Hardware Requirements
+    • Raspberry Pi (tested on Pi 4)
+    • MAX485 module for DMX512 communication
+    • DHT11/DHT22 sensor
+    • RGB LEDs
+    • IR emitter and receiver (phototransistor)
+    • Resistors for LEDs and IR components
+Connections
+    • MAX485:
+        ◦ VCC: Pin 1 (3.3V)
+        ◦ GND: Pin 6 (GND)
+        ◦ DI: Pin 8 (GPIO14, UART TX)
+        ◦ RO: Pin 10 (GPIO15, UART RX)
+        ◦ DE: Pin 11 (GPIO17)
+        ◦ RE: Pin 13 (GPIO27)
+    • RGB LEDs:
+        ◦ Red: Pin 29 (GPIO5)
+        ◦ Green: Pin 31 (GPIO6)
+        ◦ Blue: Pin 33 (GPIO13)
+    • IR Emitter:
+        ◦ Anode: Pin 32 (GPIO12, via 220Ω resistor)
+        ◦ Cathode: Pin 6 (GND)
+    • DHT11:
+        ◦ VCC: Pin 1 (3.3V)
+        ◦ DATA: Pin 7 (GPIO4)
+        ◦ GND: Pin 6 (GND)
+    • IR Receiver:
+        ◦ Anode: Pin 36 (GPIO16, via 220Ω resistor to GND)
+        ◦ Cathode: Pin 6 (GND)
+Setup
+    1. Install dependencies:
+    2. pip install -r requirements.txt
+    3. Configure Raspberry Pi:
+        ◦ Enable UART in /boot/config.txt: enable_uart=1
+        ◦ Disable serial console via raspi-config.
+    4. Create directories:
+    5. mkdir -p logs presets
+    6. touch logs/dmx_controller.log
+    7. touch presets/empty.json
+    8. Run the application:
+    9. python3 main.py
+Directory Structure
+    • main.py: Main application script
+    • backend/: Backend modules
+        ◦ dmx.py: DMX communication
+        ◦ effects.py: Dynamic lighting effects
+        ◦ sensors.py: Sensor readings
+        ◦ scenes.py: Scene management
+        ◦ leds.py: LED control
+        ◦ ir.py: IR handling
+    • logs/: Log files
+    • presets/: Saved DMX scenes
+Troubleshooting
+    • DMX not responding: Check MAX485 connections and ensure a 120Ω termination resistor is used.
+    • Sensor errors: Verify DHT11/DHT22 wiring and library installation.
+    • GUI issues: Ensure PyQt5 is installed and you’re running with a display or VNC/SSH with X11 forwarding.
+Contributing
+Feel free to fork this repository, submit issues, or send pull requests to enhance functionality.
+License
+MIT License EOF
+Create presets/empty.json
+cat << ‘EOF’ > dmx_controller_project/presets/empty.json { “1”: {“mode”: 9, “values”: [0, 0, 0, 0, 0, 0, 0, 0, 0]} } EOF
+Set executable permissions for main.py
+chmod +x dmx_controller_project/main.py
+echo “Project structure and files created successfully!” echo “Next steps:” echo “1. Install dependencies: pip install -r dmx_controller_project/requirements.txt” echo “2. Configure UART in /boot/config.txt: enable_uart=1” echo “3. Disable serial console: sudo raspi-config” echo “4. Run the application: python3 dmx_controller_project/main.py”
+
+2. **Haz el script ejecutable**:
+```bash
+chmod +x setup_dmx_project.sh
+    3. Ejecuta el script:
+    4. ./setup_dmx_project.sh
+    5. Sigue las instrucciones finales:
+        ◦ Instala las dependencias:
+        ◦ pip install -r dmx_controller_project/requirements.txt
+        ◦ Configura UART:
+        ◦ sudo nano /boot/config.txt
+Añade o verifica: enable_uart=1
+        ◦ Desactiva la consola serial:
+        ◦ sudo raspi-config
+(Interfaz > Serial > Deshabilitar consola, habilitar puerto serial).
+        ◦ Ejecuta el proyecto:
+        ◦ python3 dmx_controller_project/main.py

@@ -1,0 +1,5 @@
+[
+    {"effect": "ColorChase", "duration": 5.0},
+    {"dmx": {"1": 255, "2": 127}, "duration": 3.0},
+    {"effect": "Rainbow", "duration": 5.0}
+]

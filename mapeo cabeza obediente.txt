@@ -1,0 +1,12 @@
+#cabeza obediente direccion dmx D001 
+#canal 1> correcto recorrido completo
+#canal 2> muy lennto y recirrido milimetrico de 1 a 3c
+#canal 3. correcto recorrido completto
+#CANAL 4> muy lennto y recirrido milimetrico de 1 a 3
+#canal 5>-
+#canal 6> dimmer al final del slider hace flash
+#canal 7>
+#canal 11> cambio de colores al final  hrtobe 
+#canal 13> se vuelve automatica a partir de 7 
+#canal 14. se reinicia 
+#para que prenda canal 6 y canal 11 6 dimmer y 11 escoje color
